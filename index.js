@@ -131,7 +131,7 @@ function logout(httpsOptions, loginResult) {
 * @param {string} app Application name
  * @returns {Promise.<object, any>} When resolved returns the login result, when rejected returns any error information
  */
-function loginPrompt(fileName, httpsOptions, app) {
+function prompt(fileName, httpsOptions, app) {
 	return readloginResult(fileName)
 		.then((loginResult) => {
 			return verify(httpsOptions, loginResult);
@@ -151,5 +151,5 @@ module.exports = {
 	login,
 	verify,
 	logout,
-	loginPrompt
+	prompt
 };
