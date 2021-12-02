@@ -1,0 +1,27 @@
+{
+  "name": "node-loginout",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JamesNgo-CoT/node-loginout.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JamesNgo-CoT/node-loginout/issues"
+  },
+  "homepage": "https://github.com/JamesNgo-CoT/node-loginout#readme",
+  "devDependencies": {
+    "eslint": "^8.3.0"
+  },
+  "dependencies": {
+    "node-https-request": "git+https://github.com/JamesNgo-CoT/node-https-request.git#1.0.0",
+    "node-prompts": "git+https://github.com/JamesNgo-CoT/node-prompts.git#2.0.1"
+  }
+}
