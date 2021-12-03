@@ -128,7 +128,7 @@ function logout(httpsOptions, loginResult) {
  * Prompt for logging in a user.
  * @param {string} fileName File name to cache login result
  * @param {object} httpsOptions Node https request options
-* @param {string} app Application name
+ * @param {string} app Application name
  * @returns {Promise.<object, any>} When resolved returns the login result, when rejected returns any error information
  */
 function prompt(fileName, httpsOptions, app) {
@@ -137,7 +137,7 @@ function prompt(fileName, httpsOptions, app) {
 			return verify(httpsOptions, loginResult);
 		})
 		.catch(() => {
-			return nodePrompts('Login', [{ question: 'User Name' }, { question: 'Password', muted: true }])
+			return nodePrompts([{ question: 'User Name' }, { question: 'Password', muted: true }], 'Login')
 				.then(([{ answer: user }, { answer: pwd }]) => {
 					return login(httpsOptions, app, user, pwd)
 						.then((loginResult) => {

@@ -2,14 +2,14 @@ const nodeLoginout = require('./index');
 
 process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0;
 
-nodeLoginout.prompt('.login', {
+const httpsOptions = {
 	// REMOVED
-}, 'app').then((loginResult) => {
+};
+
+nodeLoginout.prompt('.login', httpsOptions, 'app').then((loginResult) => {
 	console.log(loginResult);
 
-	return nodeLoginout.logout({
-		// REMOVED
-	}, loginResult);
+	return nodeLoginout.logout(httpsOptions, loginResult);
 }, (error) => {
 	console.error(error);
 });
