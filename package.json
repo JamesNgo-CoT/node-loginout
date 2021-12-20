@@ -18,10 +18,11 @@
   },
   "homepage": "https://github.com/JamesNgo-CoT/node-loginout#readme",
   "devDependencies": {
+    "dotenv": "^10.0.0",
     "eslint": "^8.3.0"
   },
   "dependencies": {
-    "node-https-request": "git+https://github.com/JamesNgo-CoT/node-https-request.git#1.0.0",
+    "node-https-request": "git+https://github.com/JamesNgo-CoT/node-https-request.git#1.1.0",
     "node-prompts": "git+https://github.com/JamesNgo-CoT/node-prompts.git#3.0.0"
   }
 }
