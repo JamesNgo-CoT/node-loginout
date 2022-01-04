@@ -11,10 +11,9 @@ const httpsOptions = {
 	path: process.env.BASE_PATH
 };
 
-nodeLoginout.prompt('.login', httpsOptions, 'app').then((loginResult) => {
-	console.log(loginResult);
-
+nodeLoginout.prompt('.login.json', httpsOptions, 'app').then((loginResult) => {
+	console.log('SUCCESS', loginResult);
 	return nodeLoginout.logout(httpsOptions, loginResult);
-}, (error) => {
-	console.error(error);
+}).catch((error) => {
+	console.error('ERROR', error);
 });
